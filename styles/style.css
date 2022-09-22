@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/Helvetica.ttf")
+  }
+
+:root{
+    --color1:#1A1A1A;
+    --color2:#00B172;
+    --color3:#FFF;
+    
+}
+
+html, body{
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+img {width: 100%}
+
+/* Main */
+
+main {
+    position: relative;
+}
+
+/*Header*/
+header {
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+}
+
+.logo {
+    width: 13em;
+}
+
+nav {
+    display: flex;
+    font-size: 21px;
+}
+
+nav ul:hover {
+    cursor: pointer;
+    text-decoration: underline var(--color2) 2px;
+}
+
+/*Top image*/
+#imageTop {
+    /* position: relative; */
+    color: white;
+    display: grid;
+}
+
+
+#imageTop h1, #imageTop h3 {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+#imageTop h3 {
+    font-weight: normal;
+    top: 17%;
+    font-size: 25px;
+}
+
+#imageTop h1 {
+    top: 12%;
+    font-size: 4em;
+}
+
+/* Boxes */
+#whatsOn {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 3% 0;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    padding: 4% 0;
+}
+
+#whatsOn h1 {
+    font-size: 2em;
+    padding: 1% 0;
+    border-bottom: 4px solid;
+    border-color: var(--color2);
+    width: fit-content;
+    justify-self: center;
+}
+/* Box*/
+
+.box {
+    display: grid;
+    align-items: center;
+}.box_img {
+    max-width: 7em;
+    margin: 0 auto;
+    padding: 2%;
+}.box__title {
+    font-weight: bold;
+    height: 50px;
+    font-size: 1.4em;
+    color: var(--color2);
+}.box__text {
+    width: 70%;
+    font-size: 20px;
+    justify-self: center;
+    color: #4d5257;
+}
+
+/* Caja reproducción */
+#greenBox {
+    color: white;
+    background: var(--color2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 5%;
+    background-image: url("../images/spotify-icon-white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+}
+#greenBox h1 {
+    font-size: 2em;
+    border-bottom: solid 3px;
+    width: fit-content;
+    padding: 1% 0;
+}
+
+#cajaIzq__boxes {
+    display: grid;
+    row-gap: 10%;
+    font-size: 21px;
+    width: 50%;
+}
+
+.cajaIzq__box__title {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 3% 0;
+}
+.cajaIzq__box__text {
+    font-size: 20px;
+}
+#cajaDer {
+    display: grid;
+}#cajaDer img {
+    max-width: 450px;
+    justify-self: right;
+}
+
+@media (max-width:600px) {
+
+    
+    main {position: relative;}
+
+    nav { display: none;}
+
+    #imageTop h1 {
+        font-size: 1em;
+        top: 5%;
+    }
+
+    #imageTop h3 {
+        top: 6%;
+        font-size: 0.8em;
+    }
+    .boxes {grid-template-columns: unset;}
+    
+    #greenBox {grid-template-columns: unset;background-image: unset;}
+    #cajaDer { margin-top: 150px;}
+    .cajaIzq__box__text {font-size: 20px;}
+}
